@@ -1,4 +1,10 @@
 '''
+
+# To run this code in jupyter notebook use the command %run mainCode
+# to run this code in command prompt enter python mainCode.py
+
+This Code generates BTC_Indicators.csv
+
 This Code is for technical indicators for BTCprice.
 The indicators covered in this code are :
 Accumulation/Distribution Line,Aroon, Aroon Oscillator, Average Directional Index (ADX), Average True Range (ATR),
@@ -8,10 +14,6 @@ Pring’s Know Sure Thing (KST), Rate of Change (ROC) and  Momentum,  Relative S
 Stochastic Oscillator, TRIX, Ulcer Index, Ultimate Oscillator,  Vortex Indicator , Williams %R
 
 
-# To run this code in jupyter notebook use the command %run mainCode
-# to run this code in command prompt enter python mainCode.py
-
-This Code generates BTC_Indicators.xlsx
 '''
 
 import functions as f

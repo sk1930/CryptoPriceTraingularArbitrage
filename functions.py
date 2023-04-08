@@ -227,9 +227,9 @@ def get_macd(data, slow=26, fast=12, smooth=9):
     macd = pd.DataFrame(exp1 - exp2).rename(columns = {'Close':'macd'})
     signal = pd.DataFrame(macd.ewm(span = smooth, adjust = False).mean()).rename(columns = {'macd':'signal'})
     hist = pd.DataFrame(macd['macd'] - signal['signal']).rename(columns = {0:'hist'})
-    data['Moving Average Convergence/Divergence'] =  macd
-    data['Moving Average Convergence/Divergence_signal'] = signal
-    data['Moving Average Convergence/Divergence_hist']= hist
+    data['MovingAverageConvergenceDivergence'] =  macd
+    data['MovingAverageConvergenceDivergence_signal'] = signal
+    data['MovingAverageConvergenceDivergence_hist']= hist
     #df = pd.concat(frames, join = 'inner', axis = 1)
     return data
 
