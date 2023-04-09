@@ -1,0 +1,125 @@
+#!/bin/bash
+
+
+#SBATCH --account subramanianh
+#SBATCH --qos subramanianh
+
+#SBATCH --nodes 2
+#SBATCH --job-name=rnn     
+#SBATCH --output=slurm-log
+#SBATCH --error=slurm-err
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=2gb
+
+#module purge
+
+module load conda
+
+
+
+
+sbatch RNNtest.sub "BTCPrice" closebuzz 2 '"close","buzz"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closesentiment 2 '"close","sentiment"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeoptimism 2 '"close","optimism"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closejoy 2 '"close","joy"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closelovehate 2 '"close","lovehate"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closetrust 2 '"close","trust"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeanger 2 '"close","anger"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeconflict 2 '"close","conflict"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closefear 2 '"close","fear"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closegloom 2 '"close","gloom"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closestress 2 '"close","stress"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeviolence 2 '"close","violence"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closesurprise 2 '"close","surprise"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closetimeurgency 2 '"close","timeurgency"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeuncertainity 2 '"close","uncertainty"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closemktrisk 2 '"close","marketrisk"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closelongshort 2 '"close","longshort"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closevolatility 2 '"close","volatility"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepricemom 2 '"close","pricemomentum"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeadoption 2 '"close","adoption"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeanonymity 2 '"close","anonymity"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeattack 2 '"close","attack"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closecodesentinment 2 '"close","codesentiment"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closecodeupgrade 2 '"close","codeupgrade"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closecriminalact 2 '"close","criminalactivity"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closedevelopersentiment 2 '"close","developersentiment"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closefomo 2 '"close","fomo"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closefork 2 '"close","fork"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closehodl 2 '"close","hodl"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeinnovation 2 '"close","innovation"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closelitigation 2 '"close","litigation"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closemajorityattack 2 '"close","majorityattack"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closenoobs 2 '"close","noobs"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeregcrackdown 2 '"close","regulatorycrackdown"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeregissues 2 '"close","regulatoryissues"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closescam 2 '"close","scam"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closetransactionspeed 2 '"close","transactionspeed"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closevulnerability 2 '"close","vulnerability"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeadopforecast 2 '"close","adoptionforecast"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closedisagreement 2 '"close","disagreement"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeemotionvsfast 2 '"close","emotionvsfact"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeforkforecast 2 '"close","forkforecast"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closefuturevspast 2 '"close","futurevspast"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closelongshortforecast 2 '"close","longshortforecast"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closenegative 2 '"close","negative"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeovervalueedvsundervalueed 2 '"close","overvaluedvsundervalued"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepartnership 2 '"close","partnership"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepessimism 2 '"close","pessimism"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepositive 2 '"close","positive"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepricedirection 2 '"close","pricedirection"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepricedown 2 '"close","pricedown"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepriceforecast 2 '"close","priceforecast"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closepriceup 2 '"close","priceup"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeshortvslongterm 2 '"close","shortvslongterm"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closetopvsbottom 2 '"close","topvsbottom"' 100 "mean_absolute_error"
+
+
+
+
+
+sbatch RNNtest.sub "BTCPrice" closeACC_Distri_Indic 2 '"close","accumulation_distribution_indicator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeAroon_up 2 '"close","Aroon_up"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeAroon_down 2 '"close","Aroon_down"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeAroon_oscillator 2 '"close","Aroon_oscillator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeAdx_pos_directional_indicator 2 '"close","adx_pos_directional_indicator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeAdx_neg_directional_indicator 2 '"close","adx_neg_directional_indicator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeAvgDirectionalIndex 2 '"close","avg. Directional index"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeAvg.True Range 2 '"close","avg.True Range"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeUpper_Bollinger_Bands 2 '"close","upper_Bollinger_Bands"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeLower_Bollinger_Bands 2 '"close","lower_Bollinger_Bands"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeSimple_moving_avg_20 2 '"close","simple_moving_avg_20"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeChaikinMoneyFlow 2 '"close","Chaikin money flow"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeChaikin_Oscillator 2 '"close","chaikin_oscillator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeCoppockCurve 2 '"close","Coppock Curve"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeEaseOfMovementMA 2 '"close","Ease of Movement MA"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeForceIndex 2 '"close","ForceIndex"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closemass_index 2 '"close","mass_index"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeMACD 2 '"close","MovingAverageConvergenceDivergence"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closesenMacdSignal 2 '"close","MovingAverageConvergenceDivergence_signal"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeMACDHist 2 '"close","MovingAverageConvergenceDivergence_hist"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeMoneyFlowIndex 2 '"close","money flow index"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closePercentagePriceOscillator 2 '"close","PercentagePriceOscillator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closePercentagePriceOscillator_hist 2 '"close","PercentagePriceOscillator_hist"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closePercentagePriceOscillator_signal 2 '"close","PercentagePriceOscillator_signal"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closePercentageVolumeOscillator 2 '"close","PercentageVolumeOscillator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closePercentageVolumeOscillator_hist 2 '"close","PercentageVolumeOscillator_hist"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closePercentageVolumeOscillator_signal 2 '"close","PercentageVolumeOscillator_signal"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeKnowSureThing 2 '"close","Know Sure Thing"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeKST_signal 2 '"close","KST_signal"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeRateOfChange 2 '"close","Rate of change"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeRelativeStrengthIndex 2 '"close","Relative Strength Index"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeK_FASTStochasticIndicator 2 '"close","%K-FAST Stochastic indicator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeDSlowStochasticIndicator 2 '"close","%D- slow stochastic indicator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeTrix 2 '"close","Trix"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeUlcer_index 2 '"close","ulcer_index"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeUltimateOscillator 2 '"close","UltimateOscillator"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeVortexIndicator_diff 2 '"close","VortexIndicator_diff"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeVortexIndicator_neg 2 '"close","VortexIndicator_neg"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeVortexIndicator_pos 2 '"close","VortexIndicator_pos"' 100 "mean_absolute_error"
+sbatch RNNtest.sub "BTCPrice" closeWilliamsR 2 '"close","WilliamsR"' 100 "mean_absolute_error"
+
+
+date
+conda deactivate
+

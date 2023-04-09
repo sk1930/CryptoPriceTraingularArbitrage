@@ -1,0 +1,39 @@
+#!/bin/bash
+
+
+#SBATCH --account subramanianh
+#SBATCH --qos subramanianh
+
+#SBATCH --nodes 2
+#SBATCH --job-name=rnn     
+#SBATCH --output=slurm-log
+#SBATCH --error=slurm-err
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=2gb
+
+#module purge
+
+module load conda
+
+
+#pwd; hostname; date
+
+#source activate RNNEnvTest
+
+source activate RNNenv1
+sed -e s/"<NVAL>"/"${5}"/g -e s/"<colnum>"/"${3}"/g -e s/"<COL_LIST>"/"${4}"/g -e s/"<LOSS>"/"${6}"/g < configtemp.json >  config/configtemp_${2}_${5}_${6}.json
+#1 "BTC"; 2 "close{sentiment}
+python RNNrunP2P.py $1 $2 ${5} "${6}"
+
+summaryfile="logs/lossvalue${5}.log"
+result="`tail -8 slurm-log | grep "77/77*"`"
+echo $result  ",Neurons-${1},${2},${6} \n" >> ${summaryfile}
+
+mv slurm-log logs/slurm-$1-$2-$5-$6-$(date +'%m%d%Y-%H%M%S')-log
+mv slurm-err errors/slurm-$1-$2-$5-$6-$(date +'%m%d%Y-%H%M%S')-err
+
+
+mv BTCpointop*.png graphs  
+
+date
+conda deactivate
